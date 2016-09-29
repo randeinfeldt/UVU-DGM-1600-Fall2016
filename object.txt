@@ -1,0 +1,19 @@
+// javascript object
+
+var superhero = {
+  heroName: "Wolverine",
+  secretIdentity: "Logan",
+  age: 99,
+  archvillan: "Sabortooth",
+  xmenplane:function(){
+  return this.heroName +" drives the X-men Plane only"
+}
+}
+
+// calling a property
+
+console.log(superhero.secretIdentity);
+
+// calling a method
+
+console.log(superhero.xmenplane());
