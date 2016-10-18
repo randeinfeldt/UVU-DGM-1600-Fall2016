@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adventure Game: B'fyere</title>
+</head>
+<body>
+  <script>
+    alert("B'fyere: Wicked is Coming!");
+     function game (){
+            var player = prompt("Hey there Noob! What would you like to call yourself... other than... Noob?");
+                        
+
+  var intro = prompt("Really? Your name is "+player+"? I'm still gonna call you Noob! Anyway, I am Mobeus, an Oracle of the world B'feyer. Sadly B'feyer is ruled by an evil Witch, who is trying to kill all alternate versions of you. You are the last of your kind. If she succeeds, she becomes the Master of the Universe. No pressure right? Anyway, before you are two paths to choose from. The Yellow Bricked Road or the Red Bricked Road. One leads you to a path towards the Witch's Castle in this world's Wichita, Kansas. The other leads to a labyrinth filled with ginormous Sandworms that will eat you alive! Which bricked road do you choose? (Red, Yellow)");
+  
+if (intro.toLowerCase() == "yellow")
+ {
+   alert("As you’re walking on on the Yellow Bricked road, it ironically leads you to a maze cornfield. You venture in only to find yourself facing a clew of Sandworms... There is no escape! The entrance that you just left behind is now blocked by another Sandworm. The worms come in every direction. One after the other, they rip you limb from limb! You were literally cornered as you die a slow and painful death! The worms later spit out what's left of you because you were 'luke-worm'! The End!");
+ }
+else
+{
+  
+  //talking dog and tamale
+  
+   var inventory = {
+  talking_Dog: 0,
+  tamale: 0,
+  apple: 0,
+  castle: 0,
+  heart: 0,
+  brain: 0,
+  courage: 0
+  
+}
+function checkInv(){
+  var result = "";
+  result += "Talking Dog = "+inventory.talking_Dog+" "+
+          "Tamale = "+inventory.tamale+" "+
+          "Apple = "+inventory.apple+" "+
+          "Heart = "+inventory.heart+" "+
+          "Brain = "+inventory.brain+" "+
+          "Courage ="+inventory.courage+" "+
+          "Castle = "+inventory.castle;
+  alert(result);
+}
+alert("As you venture the Red Bricked Road, you see a sign that reads 'Welcome to B'feyerr!' After passing the sign, you come to a crossroad. Each road leads to a creature that you will encounter. It is up to you on how you will approach them. But before you make a decision, a talking chihuahua named Otto appears in front of you. Holding a bag full of Hot Tomales, he asks you in a Spanish accent, 'Wanna buy tamale?'");
+var choice1 = prompt("Do you buy tamale or pass?");
+if(choice1 =="tamale"){
+  inventory.tamale = 1;
+  console.log("Tamale ="+inventory.tamale);
+}
+else{
+  alert("You pass!")
+}
+alert("Otto the talking Chihuahua wants to come with you!");
+var choice2 = prompt("Do you take dog or move on?");
+
+if(choice2 =="take dog"){
+  inventory.talking_Dog = 1;
+  console.log("Talking Dog = "+inventory.talking_Dog);
+}
+else
+  {
+    alert("You move on!");
+  }
+
+if(choice1=="Check"){
+   checkInv();
+}
+  //game
+  
+var path = prompt("Now you need to choose a path. Otto tells you to choose wisely!(North, East, West, South)");
+
+  switch (path.toLowerCase()){
+  case "north":{
+    var northpath = prompt("You have chosen to go north where the snowy North Pole is. It is getting dark and the moon is about to peak from behind the mountains in the distance. In your path, instead of seeing Santa Claus you see a frightened man who is captive in a silver crows cage, hanging over silver spikes. The man tells you that he is a great warrior named Rim DeRoar. He frantically asks you to free him so that he can seek revenge on the evil Witch who put him there in the first place. Do you help him or move on?(Help, Move On)");
+    //move on alert
+  if (northpath.toLowerCase() == "move on")
+ {
+   alert("Rim calls you a yellow belly cowering chicken! You turn back and extend your hand to show three fingers and say, 'Read between the lines man!' Suddenly, the full moon turns Rim into a carnivorous lycan. The silver cage burns his skin, making him lose control and eventually knocking the cage loose from the chain above. He falls to his death on the silver spikes! In his gore, Rim's last howl gets the attention of a pack of werewolves who happen to be very close by. You try to out run them, but the werewolves tear you apart! Instead of turning into a werewolf you become a walking corpse. Forced to walk the earth with no memory of what you were supposed to do. The End!");
+ }
+else if("help")
+{
+  //help
+  alert("You help Rim get out of the cage. You all venture west and see a giant castle made entirely out gingerbread and other sweets and chocolates. Otto runs to take a bite out of the castle. You and Rim follow after and find a beautiful young lady with light orange skin, forest green hair and purple eyes steping out of the castle.");
+
+  //box1
+  var box1 = prompt("She intoduces herself as Dora Pan. She brings out a box and wants you to open it. Do you open it or not?");
+  if (box1.toLowerCase() == "open")
+    
+      alert("You open the box to find a silver gun loaded with silver bullets. Rim transforms into a Lycan and charges after Dora, accusing her of being the Wicked Witch of the West. Dora quickly takes the gun and shoots Rim in the head before he could complete his transformation. She shoots you in the head as well. Another one bites the dust! The End!");
+      
+        else if("not")
+          {
+            alert("Dora opens the box anyway, revealing a silver gun with silver bullets. She whips out the gun and shoots Rim in the head.");
+            
+            alert("You ask Dora why she shot him. She tells you that he was a Lycan ready to assassinate the Queen of B'fyere.");
+            
+            alert("Knowing that this lady secretly works for the Witch. You ask her where this Queen is?");
+            
+            alert("She tells you that she is right here and shoots you in the head!");
+            
+            alert("You are now dead as a door nail! The End!");
+          }
+}  
+
+    }
+    break;
+  case "south":{
+    var southpath = prompt("You have chosen South... The deep South! You meet up with a Scarecrow hung on a wooden cross with metallic gloves on . You see a wooden sign tide around the Scarecrow's neck with the name 'Dickon Feathertop' engraved on it. Suddenly you hear voices in your head. You soon find that the voices are coming from the Scarecrow. He is speaking to you telepathically. He tells you that he is sent to destroy the Wicked Witch who put him there. He asks you to use your brains to help him down. (Yes, No)");
+
+//no alert
+  if (southpath.toLowerCase() == "no")
+ {
+   alert("Dickon is disappointed that you won’t help him down. He understands, but in return he warns you of a horde of walking corpses called Scares that happen to be close by… He says that had you let him go, he could’ve protected you from the Scares... You try to outrun them, but the Scares eat you alive! The End!");
+ }
+else if("yes")
+{
+  //yes prompt
+  alert("You help Dickon down from the cross. You all venture west and see a giant castle made entirely out gingerbread and other sweets and chocolates. Otto runs to take a bite out of the castle. You and Dickon follow after and find a beautiful young lady with light orange skin, forest green hair and purple eyes steping out of the castle.");
+//south scarecrow
+
+var box2 = prompt("She introduces herself as Dora Pan. She brings out a box and wants you to open it. Do you open it or not?");
+  if (box2.toLowerCase() == "open")
+    
+      alert("You open the box to find a cricket bat. Dickon asks what the bat is for. Dora takes the bat and bashes Dickon til his brain is nothing but mush. She then does the same thing to you. You are now brain dead! The End!");
+
+      
+        else if("not")
+          {
+            alert("Dora opens the box anyway, revealing a cricket bat. She whips out the bat and bashes Dickon brains in.");
+            
+            alert("You ask Dora why she did that. She tells you that he was after the Queen's brains.");
+            
+            alert("Knowing that this lady secretly works for the Witch. You ask her where this Queen is?");
+            
+            alert("She tells you that she is right here and bashes your brains in!");
+            
+            alert("You are now brain dead!");
+          }
+}  
+
+    }
+    break;
+
+  case "east":{
+ //yes or no help
+        var eastpath = prompt("You have chosen East. before you is what appears to be a statue of a man/ You move closer and see the eyes in the statue move. A faint voice from the statue pleads that you release him. Do you release him? (Yes, No)");
+
+//no alert
+  if (eastpath.toLowerCase() == "no")
+ {
+   alert("You decide to leave the captive man behind. In so doing, a colony of giant vampire bats swoop down and take you to their roost to feed. They suck you dry to the last drop of your blood! It sucks to be you right now! The End!");
+ }
+else if("yes")
+{
+  //yes prompt
+  alert("You release Talos. He tells you that he is a Vampyre seeking revange on the Witch because out of green jealousy, she cut off his limbs and removed his heart leaving him to die. Thankfully The Good Witch gave him a robotic suit that protects him from the UV rays, so that he can be a night and day walker.");
+
+  alert("You all venture west and see a giant castle made entirely out gingerbread and other sweets and chocolates. Otto runs to take a bite out of the castle. You and Talos follow after and find a beautiful young lady with light orange skin, forest green hair and purple eyes stepping out of the castle");
+  
+  //south scarecrow
+}
+    
+  
+    //east Vampyre meets Witch
+var box3 = prompt("She intoduces herself as Dora Pan. She brings out a box and wants you to open it. Do you open it or not?");
+  
+    if (box3.toLowerCase() == "open")
+    
+      alert("You open the box to find a wooden stake and garlic. Talos tries to pull out his axe, but Dora quickly shoves the garlic down Talos' throat and successfully penetrates his armor with the wooden stake. Making Talos turn to dust. She advances towards you and uses the same stake to jam down your jugular. You die from bleeding out! The End!");
+      
+        else if("not")
+          {
+            alert("Dora opens the box anyway, revealing a wooden stake and garlic. She shoves garlic down Talos' throat and successfully penetrates his armor with the wooden stake. Talos turns to dust!");
+            
+            alert("You ask Dora why she did that. She tells you that he was a Vampyre after the Queen's heart.");
+            
+            alert("Knowing that this lady secretly works for the Witch. You ask her where this Queen is?");
+            
+            alert("She tells you that she is right here. She uses the same stake to jam down your jugular!");
+            
+            alert("You bleed out and die in your gore! The End!");
+          }
+      
+
+    }
+    break;
+    
+  case "west":{
+    var westpath = prompt("You have chosen West. You see a giant castle made entirely out gingerbread and other sweets and chocolates. Otto runs to take a bite out of the castle. You follow after him and think about taking a piece. Suddenly the door of the castle opens. A beautiful young lady with light orange skin, forest green hair and purple eyes steps out of the castle. She introduces herself as Dora Pan. She later asks if you enjoyed eating the castle. Otto is unable to answer with his mouth full of candy. You say that you weren’t that hungry for candy. Dora then brings out an apple and says, ‘Well if you don’t want a bite of my castle, then have a bite of this apple? Fruit is nature’s candy you know… Please don’t offend me...’ Do you take a bite of the castle or the apple?(Castle, Apple)");
+
+//castle alert
+  if (westpath.toLowerCase() == "castle")
+ {
+   alert("You take a bite of the castle and it ends up being your last. The candy is so sticky that you can no longer open your mouth. You can’t breathe. The candy expands and slowly clogs all your airways. The last thing you see while grabbing the lady’s skirt is her slowly turning into the evil Witch that you were warned about! She bludgers you with the apple in her hand until you’re dead. The Witch is now the Master of the Universe! The End!");
+ }
+else if("apple")
+{
+  //apple alert
+  alert("You take a bite of the apple and it ends up being your last. The apple was poisoned. Your lips go numb and soon your whole body turns limp. You fall to the ground. You see that Otto is choking from the candy and he falls down dead. You then turn to face the lady. Her beauty melts away as she turns into the evil Witch that you were warned about! The witch cackles as you breathe your last breath. The Witch is now the Master of the Universe! The End!");
+}  
+
+    }
+    break;
+    case "wisely":{
+var wiselypath = alert("Yay! You're no longer known as a Noob! You're known as Supreme Leader "+player+"! Before you is your own personal Monster Squad. A carnivorous Lycan named Rim DeRoar, a Vampyre in a UV Ray protected suit named Talos Matahari, and a Voodoo Zombie in a Scarecrow costume named Dickon Feathertop.");
+//(join)"The monsters help you kill the Witch. The Lycan scares the living crap out of the Witch with his transformation, making her lose her courage and helping the Lycan find his. The 'Tin Man' rips the heart of the Witch and claims it as his own since she destroyed his. The Scarecrow eats her brains so that he doesn't go hungry for brains again. In the end you all finish her off by saturating her with gas and lighting her up. Any type of liquid makes the Witch melt, but watching her burn as it happened was freaking hilarious! Otto urinates on the Witch’s remains. With your teamwork and noble victory, you become THE Master of the Universe!"
+
+//arrays for monster squad beginning
+	var MonsterSquad 			= ["Vampyre", "Lycan", "Zombie"];
+	MonsterSquad.sort();
+	document.write('<table>');
+	document.write('<tr><th>Monster Squad</th></tr>');
+	for(var i = 0; i < MonsterSquad.length; i++)
+	{
+		document.write('<tr><td>' + MonsterSquad[i] + '</td></tr>');
+	}
+	document.write('</table>');
+      //arrays monster squad end
+      
+var vampyre = alert("The Wicked Witch has taken something from them. The Vampyre's heart was literally taken from his chest, out of green jealousy. The suit is the only thing that is keeping him alive.");
+
+var zombie = alert("The Witch tossed Dickon into a horde of zombies, where he was bitten. He was later recovered from the Good Witch, but his jaw has been removed and his hands have been replaced with metalic gloves. This is so that he can't spread the disease that he carries. Due to having no jaw, he is forced to communicate telepathically.");
+
+var lycan = alert("The Witch has made it so Rim has no control of his werewolf transformation. The Witch holds the cure that she calls 'Courage'. He needs to get this cure!");
+
+var skills = prompt("Each monster has very particular set of skills. Skills they have acquired over a very long career. Skills that make them nightmares for Witches that brew. If you let them join you now, that'll be the end of it. They will not look for you, they will not pursue you. But if you don't, they will look for you, they will find you, and they will kill you! Good luck! (Join or No)");
+
+if (skills.toLowerCase() == "no")
+ {
+   alert("With the monster's particular set of skills they look for you, they find you, and they kill you! Bad luck! The End!");
+ }
+else if("join")
+{
+  // join alert
+  alert("You and your Monster Squad venture west and see a giant castle made entirely out gingerbread and other sweets and chocolates. Otto runs to take a bite out of the castle. You and your Squad follow after and find a beautiful young lady with light orange skin, forest green hair and purple eyes stepping out of the castle.");
+
+var box4 = prompt("She intoduces herself as Dora Pan. She brings out a box and wants you to open it. Do you open it or not?");
+ //box path
+if (box4.toLowerCase() == "not")
+    
+      alert("Dora opens the box anyway and each and every one of you get sucked into the box and are trapped for a thousand years! You have lost! The End!");
+      
+        else if("open")
+          {
+            
+            alert("You open the box and and see that Dora has a heart, a brain and a bottle that reads ‘Courage’ on it.");
+            
+            alert("You try to take it, but Dora closes the box. Her beauty melts away, revealing herself as the Witch that you have been warned about from the beginning.");
+            
+            alert("You all exclaim, 'She's a Witch!' She unhinges her jaw and swallows the box whole. Suddenly her long forest green hair transforms into tentacles. Her face changes into an octopus'. Her arms turn into bat wings and her feet grow eagle talons. She now stands 40 feet above you!");
+            
+            alert("The Vampyre brings out his axe and hacks at the monster's ankles. The Lycan jumps on to the monster's back and claws at it. The Zombie pulls out a noose, swings it in the air to loop the wings together so that the monster doesn't fly away.");
+            
+            alert("You see that your Monster Squad is struggling. You take a step back and your ankle bumps into a bottle of water that has a paper on it that reads 'Throw me!' You figure, 'Why not!' You toss the bottle at the monster!");
+            
+            alert("The water bottle breaks as it hits the monster's head. The water acts like acid on the monster's skin. It screams uncontrollably and hurts your ears with it's screeching. The monster shrinks as it falls to the ground.");
+            
+            alert("The monster is now a great puddle of brown mush. Otto walks over and urinates on the puddle.");
+            
+            alert("In the middle of the puddle is the box that holds what your Monster Squad desires. You give them each what they have been missing and in return they make you Master of the Universe! The End!");
+          }
+
+} 
+      
+      break;
+}    
+  default:
+    alert("If you don't want to play the game... that's fine... I get that... But you're wrong and I hate you!");
+}
+  }
+}
+game();
+
+    
+      </script>
+    </body>
+</html>
